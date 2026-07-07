@@ -1,0 +1,18 @@
+[Unit]
+Description=Kross Slack Gateway
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/kross/slack-gateway
+EnvironmentFile=/opt/kross/slack-gateway/.env
+ExecStart=/opt/kross/slack-gateway/venv/bin/python /opt/kross/slack-gateway/gateway.py
+Restart=always
+RestartSec=5
+User=root
+Group=root
+
+[Install]
+WantedBy=multi-user.target
+

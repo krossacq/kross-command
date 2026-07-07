@@ -43,7 +43,20 @@ Hetzner dedicated server
 -> Ubuntu VM: returns-revenue-office
 -> Hermes
 -> Kross Agent for Returns and Revenue Office
+-> Slack channel: #returns-revenue-kross
 ```
+
+## Slack MVP
+
+The first Slack MVP is live for Returns and Revenue Office:
+
+- Slack app: Kross Agent
+- Slack channel: `#returns-revenue-kross`
+- Gateway service: `kross-slack-gateway`
+- Route pattern: Slack channel -> Proxmox -> firm VM -> firm `krossagent`
+
+Future firms should use the same communication pattern while powering the
+agent from their own model provider/subscription by default.
 
 ## Model Provider Rule
 
